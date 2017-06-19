@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Friendly</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="minu.css" rel="stylesheet">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="minu.css" rel="stylesheet">  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-      <script src="https://ajax.googleapis.com/ajax/
-      libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,521 +20,460 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+  <body>
+        <header>
+          <nav class="navbar navbar-default navbar-fixed-top" id="header"><!--Header in it start-->
+          <div class="container">
 
-  <body id="top">
-
-
-      <div class="container" id="wrapper">
-            <!-- header starts -->
-<header>
-        <nav class="navbar navbar-default navbar-fixed-top" id="header">
-    <div class="container-fluid">
-
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand"  href="#" id="brand-name"> <i class="fa fa-facebook"></i> </a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-    <!--  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
-        <form class="navbar-form navbar-left">
-          <div class="input-group" id="large" >
-
-
-
-            <input  type="text" class="form-control" id="large"   placeholder="friendly">
-
-            <div class="input-group-btn" >
-              <button class="btn btn-default"  type="submit" >
-                <i class="glyphicon glyphicon-search"></i>
+    <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only ">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
               </button>
+                <img  height="50px" src="data:image/png;base64,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">
+              <a class="navbar-brand" id="navbar" href="#">
+
+              </a>
+
             </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-left">
+            <div class="form-group input-group">
+              <input style="width:100%" type="text" class="form-control" placeholder="Search friendly">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default ">
+                  <span class="glyphicon glyphicon-search " aria-hidden="true">
+                  </span>
+                </button>
+              </div>
+
           </div>
         </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><img class="dp" height="30px" width="30px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/p130x130/18671181_851508328320451_4026592306033330813_n.jpg?oh=c39019eb94870850bbacc6000af5e576&oe=59E1ECEB"></li>
+          <li><a href="#">Pinki Negi</a></li>
+          <li><a href="#">
+            <div>
+            <span style="border-left:1px solid  ;padding-left:4px" title="Home" class="glyphicon glyphicon-home" aria-hidden="true">
+            </span></div>
+          </a></li>
+          <li><a href="#"><span title="User" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            <span class="badge">6</span></a></li>
+          <li><a href="#">
+            <span title="messages" class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+              <span class="badge">8</span>
 
+          </a></li>
+          <li><a href="#">
+            <span style="padding-right:5px;" title="Notifications" class="glyphicon glyphicon-globe" aria-hidden="true">
+            </span>
+              <span class="badge">2</span>
+          </a></li>
+          <li><a href="#">
+            <span style="border-left:1px solid black;padding-left:5px" title=" Quick Help" class="glyphicon glyphicon-question-sign" aria-hidden="true">
+            </span>
+          </a></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span></a>
+        <ul class="dropdown-menu">
 
-      <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Create Page</a></li>
+            <li><a href="#">Manage Pages</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Create Group</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Create Adverts</a></li>
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Activity Log</a></li>
+            <li><a href="#">News Feed</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out</a></li>
 
-
-    <li title="profile name"><a href="#" class="white-text"><img height="30px" width="30px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/p130x130/18671181_851508328320451_4026592306033330813_n.jpg?oh=c39019eb94870850bbacc6000af5e576&oe=59E1ECEB">pinki negi</a></li>
-
-    <li title="home"><a href="#" class="white-text">Home
-</a></li>
-    <li title="friend requests"><a href="#" class="white-text"><span class="glyphicon glyphicon-user" aria-hidden="true">
-      <span class="badge">12</span></span>
-</a></li>
-    <li title="message"><a href="#" class="white-text"><span class="glyphicon glyphicon-envelope" aria-hidden="true">
-      <span class="badge">2</span></span>
-</a></li>
-    <li title="notifications"><a href="#" class="white-text"><span class="glyphicon glyphicon-globe" aria-hidden="true">
-      <span class="badge">9</span></span>
-</a></li>
-    <li title="quick help"><a href="#" class="white-text"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
-</a></li>
-
-   <li class="dropdown">
-
-            <a href="#" class="dropdown-toggle white-text" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">create page</a></li>
-              <li><a href="#">create group</a></li>
-              <li><a href="#">new groups</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">create ads</a></li>
-             <li><a href="#">advertising on facebook</a></li>
-               <li><a href="#">activity log</a></li>
-                 <li><a href="#">news feed preferences</a></li>
-                   <li><a href="#">settings</a></li>
-                   <li><a href="#">log out</a></li>
-
-
-
-
-
-            </ul>
-          </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
+      </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-
+  </nav>                              <!--nav bar used for that fb like header closed--->
+  <div class="pos-f-t">
+  <div class="collapse" id="header">
+    <div class="bg-inverse p-4">
+      <h4 class="text-white">Collapsed content</h4>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-inverse bg-inverse">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </nav>
+</div>
 </header>
-     <!-- header end -->
-
-        <div class="row content">
-           <div class="hidden-xs col-sm-4 col-md-3">
-           <div id="menu">
-             <ul class="nav nav-pills nav-stacked">
-              <li class="under-heading" role="presentation"><a href="#"><span><img height="30px" width="30px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/p130x130/18671181_851508328320451_4026592306033330813_n.jpg?oh=c39019eb94870850bbacc6000af5e576&oe=59E1ECEB"> Pinki Negi</a></span></li>
-             <li class="under-heading" role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> News feed</a></li>
-             <li class="under-heading" role="presentation"><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messenger<span class="badge pull-right">5</span></a></li>
-             </ul>
-
-         <ul class="nav nav-pills nav-stacked">
-           <p class="list-heading"> shortcuts </p>
-              <li class="under-heading" role="presentation"><a href="#"><span class="glyphicon glyphicon-font" aria-hidden="true"></span> ACADVIEW</a></li>
-               <li class="under-heading"role="presentation" ><a href="#"><span class="glyphicon glyphicon-header" aria-hidden="true"></span> HTML,CSS Groups</a></li>
-                <li class="under-heading" role="presentation"><a href="#"><span class="glyphicon glyphicon-btc" aria-hidden="true"></span> Bootstrap fundas</a></li>
-                </ul>
-
-        <ul class="nav nav-pills nav-stacked">
-          <p class="list-heading"> explore </p>
-            <li class="under-heading"role="presentation"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> groups<span class="badge pull-right" >12+</span></a></li>
-              <li class="under-heading"role="presentation"><a href="#"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> pages</a></li>
-              <li class="under-heading"role="presentation"><a href="#"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> events<span class="badge pull-right">30</span></a></li>
-
-
-               </ul>
-               <ul class="nav nav-pills">
-                 <p class="list-heading"> create </p>
-
-                    <li role="presentation" ><a href="#">Ad</a></li>
-                      <li role="presentation"><a href="#">Page</a></li>
-                           <li role="presentation"><a href="#">Group</a></li>
-                           <li role="presentation"><a href="#">Event</a></li>
-                              </ul>
-                         </div>
-                        </div>
-
-
-         <div class="col-xs-12 col-sm-8 col-md-6">
-           <div id="main">
-             <div class="panel panel-default">
-
-	<div class="panel-heading">
-
-		<span class="glyphicon glyphicon-pencil phead"> create a post </span>
-
-		<span class="glyphicon glyphicon-book phead"> Photo/Video Album</span>
-
-		<span class="postss glyphicon glyphicon-camera">Live Video</span>
-
-	</div>
-
-	<div class="panel-body">
-
-		<img  class="dp postss" height="50px" width="50px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-9/18671181_851508328320451_4026592306033330813_n.jpg?oh=cdadde525aff8ef5ad1d6adfe75cc7bc&oe=59CFED5A"alt="...">
-
-		<input style="height:50px;width:90%;" class="inp postss" type="text" placeholder="What's on your mind?">
-
- 	</div>
-
-	<div class="panel-footer">
-
-		<span><img height="40px" width="40px" src="data:image/jpeg;base64,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"> Photo/Video
-
-		<img height="40px" width="40px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI66PlgpQW4EN-QmqoT18gks77K_Rayi3Q1wcPQh0u43WAKMXc"> Feeling/Activity
-
-		</span>
-
-		</div>
-
-	</div>
-             <div class="panel panel-default">
-  <div class="panel-heading">
-
-
-    <h3 class="panel-title">
-
-    <span><img height="30px" width="30px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-9/17155635_767096996788022_6834424107539385200_n.jpg?oh=b22bf04e15438bbf7593f64fa02e01b1&oe=59E9F271">  <a href="#">Niharika singh</a><p><small> 2 hrs</small></p> <h4>feeling proud<img height="50px" width="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThsrbxTSOzDYz-v7--OsLpeEXo2VrhvV7u9VlDtDwqEQy7CEopXg"> with pinky negi and 2 others</h4>
-
-  </div>
-
-  <div class="panel-body">
-
-    <div>    <div><h3 class="text-post">Searching for a new laptop online is basically forcing your current computer to dig its own grave. </h3></div>
-<img height="100px" width="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQaF3nrj3LQsTOonJtskgx-SmdwEqSExK4q_SkZzhu1gHgO6bA">
- <div><span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
-     <span><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span></div>
-</div>
-  </div>
-  <div class="panel-footer"><div class="media">
-  <div class="media-left media-middle">
-  <a href="#">
-   <img class="media-object" height="40px" width="50px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t31.0-8/19222980_821645431333178_1262511919458703198_o.jpg?oh=bc1d13789a01821ffb7948c88662c43b&oe=59E14FBD">
-
-  </a>
-  </div>
-</div>
-
-
-
-
-  <div class="media-body">
-    <p class="comment"> <span><a href="#">prateek panchal</a></span>     fight!fight!fight! </p>
-    <div>
-      <small>
- <span> <a href="#">Like </a></span> <span> <a href="#"> comment </a><small> 2 hrs </small></span>
- </small>
-
- <p class="comment"> <span><a href="#">riya tyagi</a></span>    As usual practise makes a man perfect </p>
- <div>
-   <small>
-<span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small> 2 hrs </small></span>
-</small>
-
-
-</div>
-
-
-  </div>
-</div>
-
-
-
-<input placeholder="Write a comment..."style="width: 100%;margin-top: 15px;">
-
-</div>
-</div>
-
-
-<div class="panel panel-default">
-<div class="panel-heading">
-<h3 class="panel-title"><img height="30px" width="30px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-9/19059723_1813801208933476_8686927193408107038_n.jpg?oh=69e317e5bd00e3ff6a9550ed3f415810&oe=599F8251"><a href="#">walter scott </a><p><small> 11 hrs </small> </p></h3>
-</div>
-<div class="panel-body">
-  <div>
-        <blockquote>
-          <p>All men who have turned out worth anything have had the chief hand in their own education.</p>
-          <footer>Walter Scott</footer>
-        </blockquote>
-    </div>
-<div><img height="100px" width="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQaF3nrj3LQsTOonJtskgx-SmdwEqSExK4q_SkZzhu1gHgO6bA"></div>
-  <div>  <span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
-   <span><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
-
-</div>
-
-</div>
-
-<div class="panel-footer"><div class="media">
-<div class="media-left media-middle">
-<a href="#">
-  <img class="media-object" height="32px" width="32px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-0/p526x296/18740280_1387768631317023_4246245714837907316_n.jpg?oh=950a89264a8fdbbdc29d37e290a37a90&oe=59DA9327">
-
-</a>
-</div>
-<div class="media-body">
-<p class="comment"> <span><a href="#">RIYA SINGH</a></span> Wow, that's really insightful! </p>
-<div>
-  <small>
-<span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small> 10 hrs </small></span>
-</small>
-
-<p class="comment"> <span><a href="#">MOHIT NEGI</a></span> fabulous! </p>
-<div>
-<small>
-<span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small> 12 hrs </small></span>
-</small>
-
-
-</div>
-
-
-</div>
-</div>
-
-
-<input placeholder="Write a comment..."style="width: 100%;margin-top: 15px;">
-
-  </div>
-
-</div>
-
-<div class="panel panel-default">
-<div class="panel-heading">
-<h3 class="panel-title"><img height="30px" width="30px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-9/18740280_1387768631317023_4246245714837907316_n.jpg?oh=027bcf28c76b09328aebb54f8f0996f1&oe=59CEEAF9"><a href="#"> kartik upadhyay</a><p><small> 20hrs </small></p></h3>
-</div>
-<div class="panel-body">
-  <div class="image-post">
-        <img height="80px" width="80%" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-9/18740280_1387768631317023_4246245714837907316_n.jpg?oh=027bcf28c76b09328aebb54f8f0996f1&oe=59CEEAF9 " class="img-responsive " alt="Responsive image">
-    </div>
-<div><img height="100px" width="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQaF3nrj3LQsTOonJtskgx-SmdwEqSExK4q_SkZzhu1gHgO6bA"></div>
-  <div>  <span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
-   <span><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
-
-</div>
-
-</div>
-<div class="panel-footer"><div class="media">
-<div class="media-left media-middle">
-<a href="#">
-  <img class="media-object" height="32px" width="50px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-0/q83/p206x206/12391413_600204196784200_6878767734229260948_n.jpg?oh=61745d7fbf8d19e5f3998beb280afa0e&oe=59CCB234">
-
-</a>
-</div>
-<div class="media-body">
-<p class="comment"> <span><a href="#">pinki negi </a></span> luking smarttttt! </p>
-<div>
-  <small>
-<span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small> 8 hrs </small></span>
-</small>
-
-<p class="comment"> <span><a href="#">manoj kaptha</a></span> coooooooollllll pic bhai!! </p>
-<div>
-<small>
-<span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small> 13 hrs </small></span>
-</small>
-
-
-</div>
-
-
-</div>
-</div>
-
-
-<input placeholder="Write a comment..."style="width: 100%;margin-top: 15px;">
-
-  </div>
-</div>
-</div>
-
-
+    <div class="container" id="wrapper">
+      <div class="row">
+        <div class="col-md-3 col-sm-4 hidden-xs">                            <!-- sidebar-->
+          <div id="menu">
+            <ul class="nav nav-pills nav-stacked">
+              <li role="presentation"><a href="#"><img class="dp" height="30px" width="30px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/p130x130/18671181_851508328320451_4026592306033330813_n.jpg?oh=c39019eb94870850bbacc6000af5e576&oe=59E1ECEB"> Pinki Negi</a></li>
+              <li role="presentation"><a href="#"><span title="Feed" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> News Feed<span class="badge pull-right">13</span></a></li>
+              <li role="presentation"><a href="#"><span title="Messages" class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messenger<span class="badge pull-right">30</span></a></  li>
+            </ul>
+            <ul class="nav nav-pills nav-stacked">
+              <p class="list-heading"> Shortcuts </p>
+              <li role="presentation"><a href="#"><span title="user" class="glyphicon glyphicon-font" aria-hidden="true"></span> Acadview<span title="user" class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></a></li>
+              <li role="presentation"><a href="#"><span title="user" class="glyphicon glyphicon-header" aria-hidden="true"></span> Html,Css Groups</a></li>
+              <li role="presentation"><a href="#"><span title="user" class="glyphicon glyphicon-btc" aria-hidden="true"></span> Sarthak Sir Fundas</a></li>
+            </ul>
+            <ul class="nav nav-pills nav-stacked">
+              <p class="list-heading"> Explore </p>
+              <li role="presentation"><a href="#"><span title="user" class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Events<span class="badge pull-right">3</span></a></li>
+              <li role="presentation"><a href="#"><span title="user" class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Groups<span class="badge pull-right">6</span></a>
+              </li>
+              <li role="presentation"><a href="#"><span title="user" class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Pages<span class="badge pull-right">4</span></a></li>
+            </ul>
+          </div>
+        </div>                                            <!--sidebar-->
+        <div class="col-md-6 col-sm-8 col-xs-12" ><!--center-->
+          <div id="main">
+<!--Content-->
               <div class="panel panel-default">
-         <div class="panel-heading">
-         <h3 class="panel-title"><a href="#">TOP 10 FACTS</a><p><small> 20hrs </small></p></h3>
-         </div>
-         <div class="panel-body">
-           <div class="video-post">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-pencil phead"> Create a New Post</span>
+                    <span class="glyphicon glyphicon-book phead"> Photo/Video Album</span>
+                    <span class="postss glyphicon glyphicon-camera"> Live Video</span>
+                  </div>
+                <div class="panel-body">
+                  <img  class="dp postss" height="50px" width="40px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/p130x130/18671181_851508328320451_4026592306033330813_n.jpg?oh=c39019eb94870850bbacc6000af5e576&oe=59E1ECEB">
+                  <input style="height:50px;width:80%;" class="inp postss" type="text" placeholder="What's on Your Mind ?"">
+                </div>
+                <div class="panel-footer">
+                  <span><img height="20px" width="20px" src="data:image/jpeg;base64,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"> Photo/Video
+                    <img heoght="20px" width="20px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdONeI62EktXSTeh6-ErAJ7-BnSb_o80zcBySVsKKeM65S9IF_nQ"> Feeling/Activity
+                    </span>
+                </div>
+              </div>
+                <div class="panel panel-default">           <!--panel 1-->
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <img height="33px" width="33px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/p100x100/18740280_1387768631317023_4246245714837907316_n.jpg?oh=a3a499c59e5dc971aaee4cef5ab22f98&oe=59CC4F5D"><a href="#"></a> kartik upadhayay feeling proud<img height="20px" width="20px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Ne697Ehi2BunTgsUjIVoM9ogX6EjihoUV_ljpMDusE7FfR1c"> with pinky negi and 2 others.
+                    </h3>
+                    <p>2hrs ago</p>
+                  </div>
+                  <div class="panel-body">
+                      <h2> Practise makes a man perfect!!!fight ! fight ! fight </h2><br>
+                  <img height="60px" width="120px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQaF3nrj3LQsTOonJtskgx-SmdwEqSExK4q_SkZzhu1gHgO6bA">
+                    <div>  <a><span class="glyphicon glyphicon-thumbs-up postss" aria-hidden="true"> Like </a>
+                      <a><span class="glyphicon glyphicon-share-alt" aria-hidden="true"> share </a>
+                      <a><span class="glyphicon glyphicon-comment postss" aria-hidden="true"> Comment</a></div>
+                  </div>
+                  <div class="panel-footer">
+                    <div class="media">         <!--media -->
+                      <div class="media-left">
+                        <a href="#">
+                        <img class="media-object" height="33px" width="33px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-0/p160x160/10398921_536160419897738_4009288772031450856_n.jpg?oh=cba83c28b1d969abc745d9bbfb81ee1a&oe=59E2C698">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <!-- <h4 class="media-heading"></h4> -->    <!-- no need of this h4 -->
+                          <p class="comment"> <span><a href="#"> pinki negi </a></span> yeahhhh!!! nyc lynes  </p>
+                          <div>
+	                          <small>
+                              <span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small>7hrs ago</small></span>
+                            </small>
+                          </div>
+                      </div>
+                    </div>
+                        <input style="width: 100%;margin-top: 15px;" placeholder="Write a comment...">
+                      </div>
+                  </div>
+                   <!--panel 1 end-->
+              <div class="panel panel-default">           <!--panel 2-->
+                <div class="panel-heading">
+                  <span>
+                    <h3 class="panel-title">
+                      <img height="33px" width="33px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/c25.58.150.150/p200x200/18813456_1042763099189825_927790382008077229_n.jpg?oh=293f25a179eaf1522fdd87a25a62c28d&oe=599E579F"> <a href="#">Anju Sharma</a>
+                    </h3>
+                 <p>3hrs ago</p></span>
+               </div>
+                <div class="panel-body">
+                <img height="500px" width="500px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-0/p206x206/17951470_2270041516554512_4969212432930406785_n.jpg?oh=361aea5fc539bccdedec2568e7a84e28&oe=59C99C4F"><br>
+                <img height="60px" width="120px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQaF3nrj3LQsTOonJtskgx-SmdwEqSExK4q_SkZzhu1gHgO6bA">
+              <div>    <a><span class="glyphicon glyphicon-thumbs-up postss" aria-hidden="true"> Like </a>
+                  <a><span class="glyphicon glyphicon-share-alt" aria-hidden="true"> share </a>
+                  <a><span class="glyphicon glyphicon-comment postss" aria-hidden="true"> Comment</a></div>
+                </div>
+                <div class="panel-footer">
+                  <div class="media">         <!--media -->
+                    <div class="media-left">
+                      <a href="#">
+                      <img class="media-object" height="33px" width="33px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-0/p206x206/17951470_2270041516554512_4969212432930406785_n.jpg?oh=361aea5fc539bccdedec2568e7a84e28&oe=59C99C4F" >
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <!-- <h4 class="media-heading"></h4> -->    <!-- no need of this h4 -->
+                        <p class="comment"> <span><a href="#"> Sonam Dhiman  </a></span> owsm trip it was </p>
+                        <div>
+                          <small>
+                            <span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small>12hrs ago</small></span>
+                          </small>
+                        </div>
+                    </div>
+                  </div>
+                      <input style="width: 100%;margin-top: 15px;" placeholder="Write a comment...">
+                    </div>
+                </div>      <!--media for comments end-->
+                          <!--panel 2 end-->
+              <div class="panel panel-default">           <!--panel 3-->
+               <div class="panel-heading">
+                   <h3 class="panel-title">
+                     <span><img height="33px" width="33px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t31.0-8/p843x403/18891863_1766322993657881_4132377059172895217_o.jpg?oh=10c950301b9daae6880eb7d04b74aa52&oe=59E7BEFA"><a href="#">pinki negi</a>
+                  </h3>
+                  15 hrs ago</span>
+                    </div>
+              <div class="panel-body">
+                  <blockquote>
+                    <img height="300px" width="400px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-9/18814333_1766319136991600_1871488480323402153_n.jpg?oh=87e5758f71a45760bbd60864405094e7&oe=59E0A8A4"><br>
+                    <footer> india vs pakistan  </footer>
+                  </blockquote>
+                      <img height="60px" width="120px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQaF3nrj3LQsTOonJtskgx-SmdwEqSExK4q_SkZzhu1gHgO6bA">
+                <div>    <a><span class="glyphicon glyphicon-thumbs-up " aria-hidden="true"> Like </a>
+                    <a><span class="glyphicon glyphicon-share-alt " aria-hidden="true"> share </a>
+                    <a><span class="glyphicon glyphicon-comment " aria-hidden="true"> Comment</a></div>
+                </div>
+                <div class="panel-footer">
+                  <div class="media">         <!--media -->
+                    <div class="media-left">
+                      <a href="#">
+                      <img class="dp" height="30px" width="30px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/p160x160/13920750_1197285006983221_4607817139229963983_n.jpg?oh=18fe2f00d8245238f1e4cbbb8997a7fa&oe=59D32852">
+                      </a>
 
-         <iframe width="854" height="480" src="https://www.youtube.com/embed/6Ni5HOdGtzM" frameborder="0" allowfullscreen>
-         </iframe>
-       </div>
+                    </div>
+                    <div class="media-body">
+                      <!-- <h4 class="media-heading"></h4> -->    <!-- no need of this h4 -->
+                        <p class="comment"> <span><a href="#"> Nimit </a></span> yeahhh! east or west india always best. </p>
 
-<div><img height="100px" width="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQaF3nrj3LQsTOonJtskgx-SmdwEqSExK4q_SkZzhu1gHgO6bA"></div>
+                        <div>
+                          <small>
+                            <span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small>1hrs ago</small></span>
+                          </small>
+                          </div>
 
-        <div> <span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
-         <span><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
-         </div>
-         </div>
-         <div class="panel-footer">
-           <div class="media">
-       <div class="media-left media-middle">
-         <a href="#">
-           <img class="media-object" height="32px" width="32px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-9/18301798_1189141074546622_2130576940634184184_n.jpg?oh=7994262b5f97b9dbddeae0399e83ade1&oe=59E77BA5">
+                          <div class="media">         <!--Nested media -->
+                            <div class="media-left">
+                              <a href="#">
+                              <img class="media-object" height="35px" width="33px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/p160x160/18920452_765845160260260_457162719810041936_n.jpg?oh=7f0d223b6124f9924f5b8a1e7916f334&oe=599CA424">
+                              </a>
+                            </div>
+                            <div class="media-body">
+                              <!-- <h4 class="media-heading"></h4> -->    <!-- no need of this h4 -->
+                                <p class="comment"> <span><a href="#"> abhimaan </a></span> yeah! </p>
+                                <div>
+      	                          <small>
+                                    <span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small>12hrs ago</small></span>
+                                  </small>
+                                </div>
+                            </div>
+                          </div>
+                          <!--nested media end-->
 
-         </a>
-       </div>
-       <div class="media-body">
-         <p class="comment"> <span><a href="#">sonam dhiman</a></span> Wow, its amazing  </p>
-         <div>
-           <small>
-      <span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small> 15 hrs </small></span>
-      </small>
+                    </div>
 
-      <p class="comment"> <span><a href="#">anju sharma</a></span> yeahhhhhhhhh great jobbb </p>
-      <div>
-        <small>
-     <span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small> 24 hrs </small></span>
-     </small>
+                  </div>
 
+                    <input style="width: 100%;margin-top: 15px;" placeholder="Write a comment...">
 
-     </div>
+                    </div>
+                </div>          <!--Comments media end-->
+                <!--panel 3 end-->
 
+                <div class="panel panel-default">           <!--panel 4-->
+                 <div class="panel-heading">
+                     <h3 class="panel-title">
+                       <span><a href="#"><img src="images/mahesh.jpg" height="33px" width="33px"> Mahesh Singh Negi</a> posted a video
+                     </h3>14hrs ago</div>
+                <div class="panel-body">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item"<iframe width="854" height="480" src="https://www.youtube.com/embed/Ouy3CYv4uN4?ecver=1" frameborder="0" allowfullscreen></iframe>
+</iframe>
+                  </div>
+                       <img height="60px" width="120px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQaF3nrj3LQsTOonJtskgx-SmdwEqSExK4q_SkZzhu1gHgO6bA">
+                  <div>      <a><span class="glyphicon glyphicon-thumbs-up postss" aria-hidden="true"> Like </a>
+                      <a><span class="glyphicon glyphicon-share-alt" aria-hidden="true"> share </a>
+                      <a><span class="glyphicon glyphicon-comment postss" aria-hidden="true"> Comment</a></div>
+                  </div>
+                  <div class="panel-footer">
+                    <div class="media">         <!--media -->
+                      <div class="media-left">
+                        <a href="#">
+                        <img height="33px" width="33px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/c1.0.240.240/p240x240/18275137_445988029088901_4249281770379127946_n.jpg?oh=4af1cd2f3f922e0d5a6a427efa9e8b61&oe=59E9EBE5">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <!-- <h4 class="media-heading"></h4> -->    <!-- no need of this h4 -->
+                          <p class="comment"> <span><a href="#"> Tania sohi </a></span> hr jgh bs india pak k match k post hahaha</p>
+                          <div>
+	                          <small>
+                              <span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small>8hrs ago</small></span>
+                            </small>
+                          </div>
+                          <div class="media">         <!--Nested media -->
+                            <div class="media-left">
+                              <a href="#">
+                              <img class="media-object" height="33px" width="33px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-9/18557333_461992370802103_4317687180101240042_n.jpg?oh=8af2da37f4e4ce6b14d4b73b34024d3a&oe=599BB163">
+                              </a>
+                            </div>
+                            <div class="media-body">
+                              <!-- <h4 class="media-heading"></h4> -->    <!-- no need of this h4 -->
+                                <p class="comment"> <span><a href="#"> shelly singh  </a></span> don't miss today's dangal</p>
+                                <div>
+                                  <small>
+                                    <span> <a href="#">Like </a></span> <span> <a href="#">Comment </a><small>14hrs ago</small></span>
+                                  </small>
+                                </div>
+                            </div>
+                          </div>
+                          <!--nested media end-->
 
-       </div>
-     </div>
+                      </div>
+                    </div>
+                        <input style="width: 100%;margin-top: 15px;" placeholder="Write a comment...">
+                      </div>
+                  </div>              <!--for media comments end-->
+                  <!--panel 4 end-->
+                                       <!--panel 1 end-->
+              <!--Done content posts-->
+              <button style="width:100%" type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+                Load More
+              </button>
+          </div>
+        </div><!--center end-->
+        <!--right sidebar started-->
+        <div class="col-md-3 hidden-xs hidden-sm">
+          <div id="sidebar">
+            <div class="panel panel-default" id="ticker">
+              <div class="panel-body ticker">
+                Tickers
 
+              </div>
+            </div>
+            <div class="panel panel-default" id="go">
+              <div class="panel-body ticker" >
+                <span class=" glyphicon glyphicon-gift" id="gift" aria-hidden="true"> </span> It's Neha's birthday Today
+              </div>
+            </div>
+            <div class="panel panel-default">
+  <!-- Default panel contents -->
+        <div class="panel-heading"> Trending
+          <ul class="nav nav-tabs" role="tablist">
+            <li title="top trends" role="presentation" class="active"><a href="#trends" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></li>
+            <li title="politics" role="presentation"><a href="#politics" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-tent" aria-hidden="true"></span></a></li>
+            <li title="science & technology" role="presentation"><a href="#tech" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span></a></li>
+            <li title="sports" role="presentation"><a href="#sports" aria-controls="settings" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></li>
+            <li title="Entertainment" role="presentation"><a href="#entertainment" aria-controls="settings" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-film" aria-hidden="true"></span></a></li>
+          </ul>
+          <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="trends">
+                <span class="glyphicon glyphicon-saved" aria-hidden="true"></span>Top Trends
 
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading">Champions Trophy 2017 Final: we havn't won final , just lost a game of cricket,says virat kohli</h4>
+                    <p class="list-group-item-text">  The India skipper said that it was indeed disappointing to lose but he was proud of the team as they played some really good cricket to enter the finals of the Champions Trophy.
 
+</p>
+                  </a>
+                </div>
 
+              </div>
+              <!--Politics News-->
+              <div role="tabpanel" class="tab-pane" id="politics">
+                <span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
+                Politics
+                <a href="#" class="list-group-item active">
+                <div class="list-group">
+                    <h4 class="list-group-item-heading"> Nostradamous : Did he really predict Modi's victories, hindutva's rise and sonia Gandhi's fall?</h4>
+                    <p class="list-group-item-text"> french 16th century astrologer said narendra modi will defeat a white woman , who'd have ruled india and ensured dishonesty spread for years.</p>
+                  </a>
+              </div>
+              </div>
+              <!--technology news-->
+              <div role="tabpanel" class="tab-pane" id="tech">
+                <span class="glyphicon glyphicon-saved" aria-hidden="true"></span>Science & Technology
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading">Infosys among top losers despite Murthy dismissing report of founder selling stakes </h4>
+                  </a>
+                </div>
+              </div>
+              <!--Sports News-->
+              <div role="tabpanel" class="tab-pane" id="sports">
+                <span class="glyphicon glyphicon-saved" aria-hidden="true"></span>Sports
+                </span>
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading">This Indo-Pak final could be the third-most-watched game in cricket history</h4>
+                    <p class="list-group-item-text"> The ICC estimates that the match will be watched by 324m worldwide, which will make it the third most-watched match in cricket history after the 2011 World Cup fi nal (India-Lanka, 558m) and semifi nal (India-Pakistan, 495m)</p>
+                  </a>
+                </div>
+              </div>
+              <!--Entertainment News-->
+              <div role="tabpanel" class="tab-pane" id="entertainment">
+                <span class="glyphicon glyphicon-saved" aria-hidden="true"></span>Entertainment
+                </span>
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading">Shah Rukh Khan to make a comeo in Ranbir-Katrina's jagga jaasoos:</h4>
+                    <p class="list-group-item-text"> Fans eagerly awaiting the release of ‘Jagga Jasoos’ starring Ranbir Kapoor and Katrina Kaif have an added reason to look forward to the film’s 14 July release. If reports are anything to go by, then Bollywood Badshah Shah Rukh Khan has also hopped on-board the project.</p>
+                  </a>
+                </div>
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading">Leo most humble co-star: Bachchan </h4>
+                    <p class="list-group-item-text">  Amitabh Bachchan recalled the time he worked with Leonardo DiCaprio in Baz Luhrmann’s The Great Gatsby and posted a throwback picture from the film’s premiere in which he is seen alongside DiCaprio.</p>
+                  </a>
+                </div>              <!--List Group End News-->
 
-     <nput placeholder="Write a comment..."style="width: 100%;margin-top: 15px;">
-   </div>
- </div>
- </div>
- </div>
- </div>
+              </div>
+            </div>
+        </div>
+        <div class="panel-body">
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              SUGGESTED PAGE:-<span  class=""> <a href="#"> Rayat Bahra University </a></span>
+              <div> <img height="400px" width="300px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/c165.0.160.160/p160x160/15940873_608894462639657_2109860972078331359_n.jpg?oh=02f113d88767c87c052df1c8b12292f8&oe=59DEDF1B">
+              </div>
+            </div>
+          </div>
 
-
-
- </div>
-
-
-
-
-
-
-
- <div class="col-md-3 hidden-xs hidden-sm">
-  <div id="sidebar">
-    <div class="panel panel-default" id="ticker">
-      <div class="panel-body ticker">
-        Ticker
-
+          </div>                        <!--right sidebar end-->
+        </div>                           <!--col-md-3 end-->
       </div>
     </div>
-    <div class="panel panel-default" id="go">
-      <div class="panel-body ticker" >
-        <span class=" glyphicon glyphicon-gift" id="gift" aria-hidden="true"> </span>It's Karan Sachdeva's Birthday Today
-      </div>
-    </div>
-    <div class="panel panel-default">
-<!-- Default panel contents -->
-<div class="panel-heading"> Trending
-  <ul class="nav nav-tabs" role="tablist">
-    <li title="top trends" role="presentation" class="active"><a href="#trends" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></li>
-    <li title="politics" role="presentation"><a href="#politics" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-tent" aria-hidden="true"></span></a></li>
-    <li title="science & technology" role="presentation"><a href="#tech" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span></a></li>
-    <li title="sports" role="presentation"><a href="#sports" aria-controls="settings" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></li>
-    <li title="Entertainment" role="presentation"><a href="#entertainment" aria-controls="settings" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-film" aria-hidden="true"></span></a></li>
-  </ul>
-  <!-- Tab panes -->
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="trends">
-        <span class="glyphicon glyphicon-saved" aria-hidden="true">Top Trends
-        </span>
-        <div class="list-group">
-          <a href="#" class="list-group-item active">
-            <h4 class="list-group-item-heading">Champions Trophy 2017 Final: Kings of Cricket Builds Up To India vs Pakistan</h4>
-            <p class="list-group-item-text">  Here is a joint special presentation from India and Pakistan to discuss more about the blockbuster clash at the Oval on Sunday.</p>
-          </a>
-        </div>
-
-      </div>
-      <!--Politics News-->
-      <div role="tabpanel" class="tab-pane" id="politics">
-        <span class="glyphicon glyphicon-saved" aria-hidden="true">
-        </span>
-        Politics<div class="list-group">
-        <a href="#" class="list-group-item active">
-
-            <h4 class="list-group-item-heading">Govt has 7-point strategy to double farmers' income: Javadekar</h4>
-            <p class="list-group-item-text">  Amid growing unrest among farmers in different states, Union minister Prakash Javadekar has said the Narendra Modi-led government has set the target of doubling the farmers' income in the next five years through a seven-point strategy.</p>
-          </a>
-      </div>
-      </div>
-      <!--technology news-->
-      <div role="tabpanel" class="tab-pane" id="tech">
-        <span class="glyphicon glyphicon-saved" aria-hidden="true">Science & Technology
-        </span>
-        <div class="list-group">
-          <a href="#" class="list-group-item active">
-            <h4 class="list-group-item-heading">SanDisk iXpand Mini flash drive review: Storage companion for Apple iPhone</h4>
-            <p class="list-group-item-text">   the company launched its iXpand USB flash drive mini in India. Specifically designed to add external storage to Apple's iOS devices such as iPhones and iPads, the iXpand mini range of flash drives come in 16, 32, 64 and 128GB capacities with price ranging from Rs 2,750 to Rs 7,050. We reviewed the 32GB variant and here's what we think of it.</p>
-          </a>
-        </div>
-      </div>
-      <!--Sports News-->
-      <div role="tabpanel" class="tab-pane" id="sports">
-        <span class="glyphicon glyphicon-saved" aria-hidden="true">Sports
-        </span>
-        <div class="list-group">
-          <a href="#" class="list-group-item active">
-            <h4 class="list-group-item-heading">This Indo-Pak final could be the third-most-watched game in cricket history</h4>
-            <p class="list-group-item-text"> The ICC estimates that the match will be watched by 324m worldwide, which will make it the third most-watched match in cricket history after the 2011 World Cup fi nal (India-Lanka, 558m) and semifi nal (India-Pakistan, 495m)</p>
-          </a>
-        </div>
-      </div>
-      <!--Entertainment News-->
-      <div role="tabpanel" class="tab-pane" id="entertainment">
-        <span class="glyphicon glyphicon-saved" aria-hidden="true">Entertainment
-        </span>
-        <div class="list-group">
-          <a href="#" class="list-group-item active">
-            <h4 class="list-group-item-heading">Anupam Kher's 'The Big Sick' to release in India on June 30</h4>
-            <p class="list-group-item-text">  Veteran Indian actor Anupam Kher-starrer American film 'The Big Sick' has been set for release in India on June 30.</p>
-          </a>
-        </div>
-        <div class="list-group">
-          <a href="#" class="list-group-item active">
-            <h4 class="list-group-item-heading">Sohail Khan on SRK’s cameo in ‘Tubelight’</h4>
-            <p class="list-group-item-text">  Kabir Khan’s ‘Tubelight’ is the most awaited film of the year. With the real life brothers Salman Khan and Sohail Khan playing reel brothers, the excitement has only doubled.</p>
-          </a>
-        </div>              <!--List Group End News-->
-
-      </div>
-    </div>
-</div>
-<!-- <div class="panel-body">
-  </div> -->
-  <div class="panel panel-default">
-    <div class="panel-body">
-      SUGGESTED PAGE:-<span  class=""> <a href="http://www.poetrydream.com"> rayat bahra mohali</a></span>
-      <div> <img height="400px" width="400px" src="https://scontent.fixc1-1.fna.fbcdn.net/v/t1.0-1/c252.0.244.244/15940873_608894462639657_2109860972078331359_n.jpg?oh=1e38b267db9e57c6a5be1b4f0772ad23&oe=59CD7267">
-      </div>
-    </div>
-  </div>
-
-  </div>                        <!--right sidebar end-->
-</div>                           <!--col-md-3 end-->
-</div>
-</div>
 
 
+    <footer>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation"><a href="#">Privacy</a></li>
+        <li role="presentation"><a href="#">Terms</a></li>
+        <li role="presentation"><a href="#">Advertisements</a></li>
+        <li role="presentation"><a href="#">Ad Choices</a></li>
+        <li role="presentation"><a href="#">cookies</a></li>
+        <li role="presentation"><a href="#">More</a></li>
+        <li role="presentation" class="copyrights">Friendly © 2017</li>
+      </ul>
 
-
-
-
-
-      <!--footer start-->
-       <ul class="nav nav-pills  pull-right">
-    <li role="presentation" ><a href="#">about us</a></li>
-    <li role="presentation"><a href="#">privacy</a></li>
-    <li role="presentation"><a href="#">advertising</a></li>
-    <li role="presentation"><a href="#">cookies</a></li>
-    <li role="presentation"><a href="#">ad choices</a></li>
-    <li role="presentation"><a href="#">terms</a></li>
-    <li role="presentation"><a href="#">rate us</a></li>
-    <li role="presentation"><a href="#top">go top</a></li>
-
-  </ul>
-
-  <!--footer end-->
-   </div>
-
-
-
+    </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="asset/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
